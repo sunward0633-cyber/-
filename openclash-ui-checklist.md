@@ -4,12 +4,12 @@
 
 - 确认 OpenWrt 已安装 OpenClash
 - 优先使用支持 `GEOSITE` / `GEOIP` 的 Clash Meta / Mihomo 内核
-- 将 `openclash-regional-bypass-template.yaml` 中的占位符替换为你的真实节点参数
+- 将所选配置文件中的占位符替换为你的真实节点参数
 - 如节点不是 Shadowsocks，请按你的协议改写 `proxies` 段
 
 ## 2. 导入配置
 
-- 在 OpenClash 中上传并导入 `openclash-regional-bypass-template.yaml`
+- 在 OpenClash 中上传并导入你选择的 YAML 配置文件
 - 确认配置文件语法校验通过
 - 选择刚导入的配置为当前运行配置
 
