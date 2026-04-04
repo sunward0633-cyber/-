@@ -46,7 +46,7 @@ dns:
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   respect-rules: true
-  # 大陆网络环境下部分运营商与设备对 H3/QUIC DoH 兼容性较差，默认关闭以优先保证稳定性
+  # 大陆网络环境下部分运营商与设备对 H3/QUIC DoH 兼容性较差，默认关闭以优先保障稳定性
   prefer-h3: false
   default-nameserver:
     - 223.5.5.5
