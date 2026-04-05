@@ -192,10 +192,10 @@ rules:
   - GEOSITE,category-ads-all,广告拦截
   - GEOSITE,private,国内服务
   - GEOSITE,apple,苹果服务
-  # 子集规则必须排在父集之前，否则会被父集吞掉：
+  # 子集 / 重叠规则必须排在父集之前，否则会被父集吞掉：
   #   github ⊂ microsoft — github 被微软规则 DIRECT 吞掉导致超时
   #   youtube ⊂ google   — youtube 被谷歌规则吞掉，无法单独选择国外媒体策略组
-  #   netflix/disney ⊂ google — 同理
+  #   netflix/disney 与 google GeoSite 存在重叠，放在 google 之前以优先匹配国外媒体策略组
   - GEOSITE,github,GitHub服务
   - GEOSITE,microsoft,微软服务
   - GEOSITE,youtube,国外媒体
