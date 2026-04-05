@@ -174,15 +174,17 @@ rules:
   - GEOSITE,category-ads-all,广告拦截
   - GEOSITE,private,国内服务
   - GEOSITE,apple,苹果服务
-  # github 属于 microsoft 子集，必须排在 microsoft 之前，否则会被 DIRECT 的微软规则吞掉导致超时
+  # 子集规则必须排在父集之前，否则会被父集吞掉：
+  #   github ⊂ microsoft — github 被微软规则 DIRECT 吞掉导致超时
+  #   youtube ⊂ google   — youtube 被谷歌规则吞掉，无法单独选择国外媒体策略组
   - GEOSITE,github,GitHub服务
   - GEOSITE,microsoft,微软服务
-  - GEOSITE,google,谷歌服务
-  - GEOSITE,telegram,电报消息
-  - GEOSITE,openai,AI服务
   - GEOSITE,youtube,国外媒体
   - GEOSITE,netflix,国外媒体
   - GEOSITE,disney,国外媒体
+  - GEOSITE,google,谷歌服务
+  - GEOSITE,telegram,电报消息
+  - GEOSITE,openai,AI服务
   - GEOSITE,cn,国内服务
   - GEOIP,private,国内服务,no-resolve
   - GEOIP,CN,国内服务,no-resolve
