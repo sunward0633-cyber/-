@@ -13,6 +13,9 @@ log-level: info
 ipv6: false
 unified-delay: true
 tcp-concurrent: true
+# keep-alive 让已建立的代理连接保持复用，避免每次请求都重新握手
+# 对高延迟线路效果显著：省掉 3-4 个 RTT 的重复握手开销
+keep-alive-interval: 30
 find-process-mode: strict
 global-client-fingerprint: chrome
 geodata-mode: true
